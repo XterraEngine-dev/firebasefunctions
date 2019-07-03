@@ -1,0 +1,16 @@
+{
+    "rules": {
+        "app-logistica": {
+            ".read": true,
+            "$app-logistica": {
+                ".write": true,
+                ".read": true,
+                "$lol": {
+                    ".write": true,
+                    ".read": true,
+                    ".validate": "newData.child('servicio').isBoolean() && $lol == 'data'"
+                }
+            }
+        }
+    }
+}
